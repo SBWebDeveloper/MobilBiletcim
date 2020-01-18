@@ -1,0 +1,833 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="images/favicon.ico" rel="icon" />
+
+    <title>Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com</title>
+    <meta name="description" content="Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com">
+    <meta name="author" content="sebahattinbakir.com.tr">
+
+    <!-- Web Fonts
+    ============================================= -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <!-- Stylesheet
+    ============================================= -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+</head>
+<body>
+    <div id="main-wrapper">
+        <header id="header">
+            <div class="container">
+                <div class="header-row">
+                    <div class="header-column justify-content-start">
+                        <div class="logo">
+                            <a href="index.html" title="Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com">
+                                <img src="images/logo.png" alt="Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com" style="width: 230px;" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-column justify-content-end">
+                        <nav class="primary-menu navbar navbar-expand-lg">
+                            <div id="header-nav" class="collapse navbar-collapse">
+                                <ul class="navbar-nav">
+                                    <li class=""><a class="" href="#">Uçak Bileti</a></li>
+                                    <li class=""><a class="" href="#">Yurtiçi</a></li>
+                                    <li class=""><a class="" href="#">Yurtdışı</a></li>
+                                    <li class=""><a class="" href="#">Check-In</a></li>
+                                    <li class=""><a class="" href="#">Blog</a></li>
+                                    <li class=""><a class="" href="#">İletişim</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" href="#">Sayfalar</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="index.html">Anasayfa</a></li>
+                                            <li><a class="dropdown-item" href="tek-yon-ucak-bileti.html">Tek Yön Uçak Bileti</a></li>
+                                            <li><a class="dropdown-item" href="gidis-donus-ucak-bileti.html">Gidiş Dönüş Uçak Bileti</a></li>
+                                            <li><a class="dropdown-item" href="ucus-detaylari.html">Uçuş Detayları - Ödeme Sayfası</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="login-signup ml-lg-2">
+                                        <a class="pl-lg-4 pr-0" data-toggle="modal" data-target="#login-signup" href="#" title="Giriş Yap / Üye Ol">
+                                            Giriş Yap / Üye Ol <span class="d-none d-lg-inline-block"><i class="fas fa-user"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"> <span></span> <span></span> <span></span> </button>
+                </div>
+            </div>
+        </header>
+        <div id="content">
+            <div class="hero-wrap py-4 py-md-5">
+                <div class="hero-mask opacity-7 bg-primary"></div>
+                <div class="hero-bg" style="background-image: url('./images/bg/slider-bg.jpg');"></div>
+                <div class="hero-content py-0 py-lg-3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="position-relative px-4 pt-3 pb-4">
+                                    <div class="hero-mask opacity-8 bg-dark rounded"></div>
+                                    <div class="hero-content">
+                                        <!-- Tabs -->
+                                        <ul class="nav nav-tabs nav-fill style-4 border-bottom" id="myTab" role="tablist">
+                                            <li class="nav-item"> <a class="nav-link active" id="flight-tab" data-toggle="tab" href="#ucak-bileti" role="tab" aria-controls="flight" aria-selected="true">Uçak Bileti</a> </li>
+                                            <li class="nav-item"> <a class="nav-link" id="hotels-tab" data-toggle="tab" href="#check-in" role="tab" aria-controls="hotels" aria-selected="true">Check-In</a> </li>
+                                            <li class="nav-item"> <a class="nav-link" id="car-tab" data-toggle="tab" href="#pnr-sorgulama" role="tab" aria-controls="car" aria-selected="false">PNR Sorgulama</a> </li>
+                                        </ul>
+                                        <div class="tab-content pt-4" id="myTabContent">
+                                            <!-- Uçak Bileti -->
+                                            <div class="tab-pane fade show active" id="ucak-bileti" role="tabpanel" aria-labelledby="flight-tab">
+                                                <form id="bookingFlight" class="search-input-line" method="post">
+                                                    <div class="text-light mb-2">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input id="oneway" name="flight-trip" class="custom-control-input" checked="" required type="radio">
+                                                            <label class="custom-control-label" for="oneway">Tek Yön</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input id="roundtrip" name="flight-trip" class="custom-control-input" required type="radio">
+                                                            <label class="custom-control-label" for="roundtrip">Gidiş - Dönüş</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <input type="text" class="form-control" id="flightFrom" required placeholder="Nereden">
+                                                            <span class="icon-inside"><i class="fas fa-plane-departure"></i></span>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <input type="text" class="form-control" id="flightTo" required placeholder="Nereye">
+                                                            <span class="icon-inside"><i class="fas fa-plane-arrival"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <input id="flightDepart" type="text" class="form-control" autocomplete="off" required placeholder="Gidiş Tarihi">
+                                                            <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <input id="flightReturn" type="text" class="form-control" autocomplete="off" required placeholder="Dönüş Tarihi">
+                                                            <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="travellers-class form-group">
+                                                        <input type="text" id="flightTravellersClass" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="1 Yolcu / Ekonomi" readonly required onkeypress="return false;">
+                                                        <a href=""></a> <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
+                                                        <!-- Travellers & Class Dropdown -->
+                                                        <div class="travellers-dropdown">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-7">
+                                                                    <p class="mb-sm-0">Yetişkin</p>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <div class="qty input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner">-</button>
+                                                                        </div>
+                                                                        <input type="text" data-ride="spinner" id="flightAdult-travellers" class="qty-spinner form-control" value="1" readonly>
+                                                                        <div class="input-group-append">
+                                                                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner">+</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="my-2">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-7">
+                                                                    <p class="mb-sm-0">
+                                                                        Çocuk <small class="text-muted">(2-12 Yaş)</small>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <div class="qty input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner">-</button>
+                                                                        </div>
+                                                                        <input type="text" data-ride="spinner" id="flightChildren-travellers" class="qty-spinner form-control" value="0" readonly>
+                                                                        <div class="input-group-append">
+                                                                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner">+</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="my-2">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-7">
+                                                                    <p class="mb-sm-0">
+                                                                        Bebek <small class="text-muted">(0-2 Yaş)</small>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <div class="qty input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner">-</button>
+                                                                        </div>
+                                                                        <input type="text" data-ride="spinner" id="flightInfants-travellers" class="qty-spinner form-control" value="0" readonly>
+                                                                        <div class="input-group-append">
+                                                                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner">+</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="mt-2">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-sm-7">
+                                                                    <p class="mb-sm-0">
+                                                                        Öğrenci <small class="text-muted">(13-24 Yaş)</small>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-sm-5">
+                                                                    <div class="qty input-group">
+                                                                        <div class="input-group-prepend">
+                                                                            <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightOgrenci-travellers" data-toggle="spinner">-</button>
+                                                                        </div>
+                                                                        <input type="text" data-ride="spinner" id="flightOgrenci-travellers" class="qty-spinner form-control" value="0" readonly>
+                                                                        <div class="input-group-append">
+                                                                            <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightOgrenci-travellers" data-toggle="spinner">+</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="mt-2">
+                                                            <div class="mb-3">
+                                                                <div class="custom-control custom-radio">
+                                                                    <input id="flightClassEconomic" name="flight-class" class="flight-class custom-control-input" value="0" checked="" required type="radio">
+                                                                    <label class="custom-control-label" for="flightClassEconomic">Ekonomi</label>
+                                                                </div>
+                                                                <div class="custom-control custom-radio">
+                                                                    <input id="flightClassFirstClass" name="flight-class" class="flight-class custom-control-input" value="3" required type="radio">
+                                                                    <label class="custom-control-label" for="flightClassFirstClass">Business</label>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn btn-primary btn-block submit-done" type="button">Tamam</button>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block mt-4" type="submit">Uçak Bileti Ara</button>
+                                                </form>
+                                            </div>
+                                            <!-- Check-In -->
+                                            <div class="tab-pane fade" id="check-in" role="tabpanel" aria-labelledby="hotels-tab">
+                                                <form id="bookingHotels" class="search-input-line" method="post">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 form-group">
+                                                            <input type="text" class="form-control" id="" required placeholder="Rezervasyon (PNR) kodu">
+                                                            <span class="icon-inside"><i class="fas fa-plane-departure"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <input type="text" class="form-control" id="" required placeholder="Yolcu Adı">
+                                                            <span class="icon-inside"><i class="fas fa-user-circle"></i></span>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <input type="text" class="form-control" id="" required placeholder="Yolcu Soyadı">
+                                                            <span class="icon-inside"><i class="fas fa-user-circle"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block mt-4" type="submit">Check-in Yap</button>
+                                                </form>
+                                            </div>
+                                            <!-- PNR Sorgulama -->
+                                            <div class="tab-pane fade" id="pnr-sorgulama" role="tabpanel" aria-labelledby="car-tab">
+                                                <form id="bookingCars" class="search-input-line" method="post">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 form-group">
+                                                            <input type="text" class="form-control" id="" required placeholder="PNR Kodu">
+                                                            <span class="icon-inside"><i class="fas fa-plane-departure"></i></span>
+                                                        </div>
+                                                        <div class="col-lg-6 form-group">
+                                                            <input type="text" class="form-control" id="" required placeholder="Yolcu Soyadı">
+                                                            <span class="icon-inside"><i class="fas fa-user-circle"></i></span>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block" type="submit">PNR Sorgula</button>
+                                                </form>
+                                            </div>
+                                        </div><!-- Tabs End -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-5 mt-lg-0">
+                                <h2 class="text-8 font-weight-600 text-light">En Uygun Uçak Bileti</h2>
+                                <p class="lead mb-4 text-light">En Ucuz Uçak Bileti mi Arıyorsun? Aradığın Bilet Uygun Fiyatlarla mobilbiletcim.com'da</p>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="featured-box style-3 mb-4">
+                                            <div class="featured-box-icon border rounded-circle text-light">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                            <p class="text-light" style="margin-bottom: 0;">7/24 Ücretsiz Çağrı Merkezi</p>
+                                            <h2 class="text-light font-weight-600">0850 305 08 49</h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="featured-box style-3 mb-4">
+                                            <div class="featured-box-icon border rounded-circle text-light">
+                                                <i class="fas fa-plane"></i>
+                                            </div>
+                                            <h3 class="text-light" style="margin-bottom: 0;">Türkiye'nin En Ucuz Uçak Bilet Hattı</h3>
+                                            <p class="text-light opacity-8">Hayallerinize ve sevdiklerinize en ekonomik uçmanın keyfini mobilbiletcim.com'da yaşayın.</p>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-12">
+                                        <div class="featured-box style-3 mb-4">
+                                            <div class="featured-box-icon border rounded-circle text-light"> <i class="fas fa-plane"></i></div>
+                                            <h3 class="text-light" style="margin-bottom: 0;">Türkiye'nin En Ucuz Uçak Bilet Hattı</h3>
+                                            <p class="text-light opacity-8">Hayallerinize ve sevdiklerinize en ekonomik uçmanın keyfini mobilbiletcim.com'da yaşayın.</p>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="section bg-light shadow-md" style="background-image: url(images/populer-img.png);">
+                <div class="section py-4">
+                    <div class="container">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item"> <a class="nav-link active" id="first-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">Yurt İçi Popüler Uçuşlar</a> </li>
+                            <li class="nav-item"> <a class="nav-link" id="second-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">Yurt Dışı Popüler Uçuşlar</a> </li>
+                        </ul>
+                        <div class="tab-content my-3" id="myTabContent">
+                            <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-tab">
+                                <div class="row banner">
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Ankara</h2>
+                                                    <p>80 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/ankara-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Ankara</h2>
+                                                    <p>80 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/ankara-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Ankara</h2>
+                                                    <p>80 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/ankara-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row banner">
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Ankara</h2>
+                                                    <p>80 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/ankara-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Ankara</h2>
+                                                    <p>80 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/ankara-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Ankara</h2>
+                                                    <p>80 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/ankara-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-tab">
+                                <div class="row banner">
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Londra</h2>
+                                                    <p>980 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/londra-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Londra</h2>
+                                                    <p>980 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/londra-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Londra</h2>
+                                                    <p>980 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/londra-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row banner">
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Londra</h2>
+                                                    <p>980 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/londra-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Londra</h2>
+                                                    <p>980 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/londra-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-1">
+                                        <div class="item rounded">
+                                            <a href="#">
+                                                <div class="caption">
+                                                    <h2>İstanbul - Londra</h2>
+                                                    <p>980 TL'den itibaren</p>
+                                                </div>
+                                                <div class="banner-mask"></div>
+                                                <img class="img-fluid" src="images/londra-img.jpg" alt="banner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="section bg-light shadow-md">
+                <div class="container">
+                    <!-- Yurtiçi Uçak Bileti
+                    ============================================= -->
+                    <h2 class="mobilbiletcim-baslik">Neden MobilBiletcim.com</h2>
+                    <p class="lead text-dark">Neden Uçak Biletimi MobilBiletcim.com'dan Almalıyım?</p>
+
+                    <p class="lead text-dark">
+                        Mobilbiletcim.com hizmete girdiği günden bu yana, yurt içi uçak bileti ve yurt dışı uçak bileti satışını üstün nitelikli ve kaliteli bir şekilde devam ettiren bir web sitesi olarak hizmet veriyor.</p>
+                    <p class="lead text-dark">Mobilbiletcim, adından da anlaşılacağı üzere "Hızlı ve mobil odaklı uçak bileti" prensibiyle kurulmuş olup; yüzlerce hava yolu şirketi ile  uçuşları sizler için  kolayca listeleyen, en uygun ve en ucuz uçak biletini bulmanız noktasında size yardımcı olan bilet satış sitesidir.</p>
+                    <p class="lead text-dark">Kullanıcılarımızın havayolları firmalarını aratarak Yurtiçi ve dışhat tüm havayolları uçuşlarını hızlı bir şekilde bulabileceği en iyi uçak bileti fiyatları'nı  karşılaştırmalarına ve en uygununu  bulmalarına olanak tanıyan, kendi alanında en iddialı rezervasyon fiyat karşılaştırma ve satın alma sistemidir. </p>
+                    <p id="dots" style="margin-top: -50px;">&nbsp;</p>
+                    <span id="more">
+                        <p class="lead text-dark">Mobilbiletcim.com bunu yaparken yolcuların uçak biletini kolayca bulabilmesi için hava yolu şirketlerini listeleyerek, tek sayfa üzerinde tüm hava yollarının biletlerini istediğiniz şekilde sıralayarak, en hesaplı veya en makul fiyatlı biletlere  kolay bir şekilde ulaşmanızı sağlıyor</p>
+                        <p class="lead text-dark">Yolcuların uçuşlarını hesaplı, ucuz ve en kaliteli bir şekilde gerçekleştirebilmelerini amaçlayan sitemiz, aynı zamanda bilet çağrı merkezi aracılığı ile de hızlı ve doğru bilet alabilmeniz için hizmet veriyor. Mobilbiletcim uçak bileti çağrı merkezimizi arayarak uçak bileti kampanyalarından ve diğer hizmetleri önceden öğrenme ve uygun ve ihtiyacınızı karşılayan uçak bileti alma şansına sahip olabilirsiniz.</p>
+                        <p class="lead text-dark">Mobilbiletcim.com  sitemizden Uçak Bileti Satın Alırken : öncelikle Uçak bileti arama formunu kullanarak tarihinizi nereden nereye  gitmek istediğinizi,  ve kaç kişi olduğunuz bilgisini girin.  Sonraki ekranda uçak havayolu şirketlerinin uçak bileti fiyatlarını istediğiniz gibi sıralayın. Kendi bütçenize ve seyahat beklentinize uygun uçak biletini seçin.Yolcu bilgilerini girin. İstediğiniz ödeme şeklini seçin. Ödeme bilgilerinizi girerek tamamlayın. 3D Secure-güvenlik yoluyla güvenli ödeme ile uçak biletinizi satın alın.</p>
+                        <h5>İstediğiniz Uçak Bileti Hayal Değil</h5>
+                        <p class="lead text-dark">Bilindiği  gibi Yurtdışı ve Yurtiçi uçak bileti rezervasyonu için yolculuk tarihi belli ise çok önceden bilet satın almak, bütçesinin hesabını bilenler için maddi anlamda çok büyük kazanç sağlıyor. Mobilbiletcim de, ekonomisini düşünen yolcularımız uçak bileti için uçak şirketlerinin promosyonlarına, uçak bileti fırsatlarına ve indirimli uçak bileti kampanyalarına Sitemiz üzerinden kolaylıkla ulaşabilir. Güvenli (3D) ödeme Seçenekleri ile kolaylıkla Uçak Bileti Satın Alabilirsiniz</p>
+                        <p class="lead text-dark">Mobilbiletcim.com yolcularımızın güvenlik endişelerini bilerek buna göre hareket etmektedir. Bu konuda  gereken tüm hassasiyet gösterilmiş, endişe duymadan sağlıklı bir şekilde uçak bileti satın almanız için her türlü üst düzey güvenlik sertifikalarını almış bir sitedir. İnternetten uçak bileti satın almanın yarattığı sıkıntıyı bilen Mobilbiletcim; 3D güvenlik(Security), internet güvenlik sistemi ve uçak bileti satın alma aşamasındaki birkaç adımlı güvenliği sayesinde, sizlere güvenle bilet alma deneyimi sunuyor. Kredi kartı bilgilerini kaydetmeyen Mobilbiletcim kolay ve güvenli  ödeme seçenekleri ile bir web sitesi olarak hizmet veriyor.</p>
+                        <h5>En Uygun Uçak Bileti Mobilbiletcim.com’da!</h5>
+                        <p class="lead text-dark">Mobilbiletcim.com en iyi fiyatlı uçak bileti konusunda önde giden bir sitedir. Gidiş-dönüş, yurtiçi ve yurtdışı uçak biletlerinde en uygun ve ucuz bir şekilde uçmak için bilet almadan önce çok sayıda firmanın biletlerini web sitemizden görüntüleyebilir ve en ucuz uçak bileti hatlarını öğrenebilirsiniz. Her daim ulaşabileceğiniz çağrı merkezimiz ve  teknik destek servisimiz sayesinde bize ulaşabilirsiniz. Uçak bileti satın almanız için Mobilbiletcim.com her zaman hazırda sizi bekliyor!</p>
+                        <h5>Onlarca Firmanın Uçak Biletleri</h5>
+                        <p class="lead text-dark">Yüzlerce uçak havayolu firmasının uluslar arası  ölçekte  olduğu gibi ulusal alandada havayolu ulaşımı her geçen gün biraz daha artmaktadır.  hızlı ulaşım, uygun fiyat ve kaliteli hizmet anlayışıda uçak bileti satışlarını ve siteleri ön plana çıkarmıştır. </p>
+                        <p class="lead text-dark">Değişik seyahat noktalarından, farklı havayolu şirketleri  uygun fiyatlı biletleri sunabiliyor. Bu fiyatları ve uçuşları ayrı ayrı kontrol etmek oldukça zor ve zaman kaybettirecek bir çabadır. Yurtdışı uçak bileti noktasında işler daha zordur.  Mobilbiletcim.com, onlarca havayolu firmasının uçak biletlerini bir araya getiriyor. Mesela Amerika Charter Havayolu Çin Hava Yolları (China South Airlines), (Continental Airlines),Amerika Hava Yolları (Delta), İspanya Hava Yolları (Iberia), (American Airlines), İtalya Hava Yolları (Alitalia), Kanada (Air Canada), İngiltere (Easyjet), Almanya Hava Yolları (Lufthansa),Amerika (United Airlines), Japonya Hava Yolları (JAL Japan), (Northwest), Japonya Hava Yolları (All Nippon), Amerika Uçuş Şirketi (USAirways), İngiltere Hava Yolları (British Airways), İrlanda (Ryanair), Avustralya (Qantas), Çin Havayolu (China East), Londra Hava Yolları (West Air), Fransa Hava Yolları (Air France), Çin Hava Yolları (Air China)  ve dahası Mobilbiletcim.com da. </p>
+                    </span>
+                    <strong onclick="myFunction()" id="myBtn">Devamını Göster</strong>
+                    <!-- Yurtiçi Uçak Bileti end -->
+                </div>
+            </div>
+            <section class="section bg-light shadow-md pt-4 pb-3">
+                <div class="container">
+                    <!--<h2 class="text-9 font-weight-600 text-center">Neden MobilBiletcim.com</h2>
+                    <p class="lead text-center mb-5">Neden Uçak Biletimi MobilBiletcim.com'dan Almalıyım?</p>-->
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <div class="featured-box-icon">
+                                    <i class="fas fa-plane"></i>
+                                </div>
+                                <h4>Hızlı ve Kolay Uçak Bileti</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <div class="featured-box-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h4>Güvenli Ödeme</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <div class="featured-box-icon">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <h4>Satış Sonrası Destek</h4>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="featured-box text-center">
+                                <div class="featured-box-icon">
+                                    <i class="far fa-life-ring"></i>
+                                </div>
+                                <h4>7/24 Canlı Destek</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer id="footer" class="bg-white pt-5 pb-4 mt-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md mb-3 mb-md-0 sec-two-inner">
+                        <h4 class="text-3 font-weight-400 mb-3 footer-baslik">Yurtiçi Şehirler <i class="mobilfooter-simge fas fa-chevron-down"></i></h4>
+                        <ul class="nav flex-column ftr_innr">
+                            <div class="row">
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">İstanbul Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Ankara Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Trabzon Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Antalya Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">İzmir Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Bodrum Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Erzurum Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Erzincan Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Mardin Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Şanlıurfa Uçak Bileti</a></li>
+                                </div>
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Diyarbakır Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Gaziantep Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kayseri Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Adana Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Elazığ Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Dalaman Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Malatya Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Samsun Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Konya Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Denizli Uçak Bileti</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md mb-3 mb-md-0 sec-two-inner">
+                        <h4 class="text-3 font-weight-400 mb-3 footer-baslik">Yurtdışı Şehirler <i class="mobilfooter-simge fas fa-chevron-down"></i></h4>
+                        <ul class="nav flex-column ftr_innr">
+                            <div class="row">
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Londra Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Bakü Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kiev Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Frankfurt Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Paris Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Prag Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Brüksel Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Hollanda Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Roma Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">İtalya Uçak Bilet</a></li>
+                                </div>
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Dubai Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Köln Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Batum Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Venedik Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Bangkok Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Moskova Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Münih Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Danimarka Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Düsseldorf Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Amsterdam Uçak Bileti</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md mb-3 mb-md-0 sec-two-inner">
+                        <h4 class="text-3 font-weight-400 mb-3 footer-baslik">Kurumsal <i class="mobilfooter-simge fas fa-chevron-down"></i></h4>
+                        <ul class="nav flex-column ftr_innr">
+                            <div class="row">
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Hakkımıza</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Uçak Bileti Ara</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Check-In Yap</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Sıkça Sorulan Sorular</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kullanım Koşulları</a></li>
+                                </div>
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">KVKK</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Gizlilik Politikası</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kampanyalar</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">İletişim Bilgileri</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Yardım Merkezi</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                        <a href="https://www.tursab.org.tr/tr/ddsv" target="_blank" rel="nofollow">
+                            <img src="images/footer-tursab-belgeno.png" alt="tursab-belge-no" style="padding-top: 10px;max-width: 280px;text-align: center;margin: 0 auto;display: block;" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4" style="border-top: 1px solid #e6e9ec;">
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <p>Güvenli Ödeme</p>
+                        <ul class="payments-types">
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/visa.png" alt="visa" title="Visa"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/mastercard.png" alt="mastercard" title="Mastercard"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/comodo.png" alt="comodo" title="Comodo SSL"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/tursab.png" alt="TURSAB" title="TURSAB"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/aiata.png" alt="IATA" title="IATA"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <p>E-Bülten</p>
+                        <div class="input-group newsletter">
+                            <input class="form-control" placeholder="E-mail Adresiniz" name="newsletterEmail" id="newsletterEmail" type="text">
+                            <span class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">Abone Ol</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-md-end flex-column">
+                        <p>Bizi Takip edin</p>
+                        <ul class="social-icons social-icons-sm social-icons-colored">
+                            <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social-icons-pinterest"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                            <li class="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-copyright">
+                    <small>Sitede yer alan tüm metin, resim ve içeriklerin tüm hakları mobilbiletcim.com'a aittir. Hiç bir şekilde basılı veya elektronik bir ortamda izinsiz kullanılmaz ve kopyalanamaz.</small>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item"> <a class="nav-link" href="#">Kişisel Verilerin Korunması</a> </li>
+                        <li class="nav-item"> <a class="nav-link active" href="#">Kullanım Koşulları</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Gizlilik Politikası</a> </li>
+                    </ul>
+                    <p class="copyright-text">
+                        2020 © <a href="#">Mobilbiletcim.com</a> Her Hakkı Saklıdır. <br /> <a href="https://www.sebahattinbakir.com.tr/hizmetlerimiz/ankara-web-tasarim/" target="blank">Ankara Web Tasarım Ajansı</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a id="back-to-top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+    <!-- Giriş Yap / Üye Ol
+    ============================================= -->
+    <div id="login-signup" class="modal fade" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-sm-3">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"> <a id="login-tab" class="nav-link active text-4" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Giriş Yap</a> </li>
+                        <li class="nav-item"> <a id="signup-tab" class="nav-link text-4" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Üye Ol</a> </li>
+                    </ul>
+                    <div class="tab-content pt-4">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form id="loginForm" method="post">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="loginMobile" required placeholder="Telefon veya Email Adresi">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="loginPassword" required placeholder="Şifre">
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-sm">
+                                        <div class="form-check custom-control custom-checkbox">
+                                            <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
+                                            <label class="custom-control-label" for="remember-me">Beni hatırla</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm text-right">
+                                        <a class="justify-content-end" href="#">Şifremi Unuttum ?</a>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-block" type="submit">Giriş Yap</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                            <form id="signupForm" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" data-bv-field="number" id="signupEmail" required placeholder="Email Adresi">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="signupMobile" required placeholder="Telefon Numarası">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="signuploginPassword" required placeholder="Şifre">
+                                </div>
+                                <button class="btn btn-primary btn-block" type="submit">Üye Ol</button>
+                            </form>
+                        </div>
+                        <div class="d-flex align-items-center my-4">
+                            <hr class="flex-grow-1">
+                            <span class="mx-2">veya</span>
+                            <hr class="flex-grow-1">
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <button type="button" class="btn btn-block btn-outline-primary">Facebook ile Giriş Yap</button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-block btn-outline-danger">Google ile Giriş Yap</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Giriş Yap / Üye Ol end -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script>
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Devamını Göster";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Devamını Gizle";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            'use strict';
+            // Düzenlenecek
+            $('#flightFrom,#flightTo').autocomplete({
+                minLength: 3,
+                delay: 100,
+                source: function (request, response) {
+                    $.getJSON(
+                        'http://gd.geobytes.com/AutoCompleteCity?callback=?&q=' + request.term,
+                        function (data) {
+                            response(data);
+                        }
+                    );
+                },
+            });
+            // Gidiş Tarihi
+            $('#flightDepart').daterangepicker({
+                singleDatePicker: true,
+                minDate: moment(),
+                autoUpdateInput: false,
+            }, function (chosen_date) {
+                $('#flightDepart').val(chosen_date.format('MM-DD-YYYY'));
+            });
+
+            // Dönüş Tarihi
+            $('#flightReturn').daterangepicker({
+                singleDatePicker: true,
+                minDate: moment(),
+                autoUpdateInput: false,
+            }, function (chosen_date) {
+                $('#flightReturn').val(chosen_date.format('MM-DD-YYYY'));
+            });
+
+            // Fiyat Aralığı
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 1200,
+                values: [125, 980],
+                slide: function (event, ui) {
+                    $("#amount").val(ui.values[0] + " TL - " + ui.values[1] + " TL");
+                }
+            });
+            $("#amount").val($("#slider-range").slider("values", 0) + " TL -" +
+                $("#slider-range").slider("values", 1) + " TL");
+        });
+
+        $(".sec-two-inner").click(function () {
+            if ($(window).width() < 767) {
+                $(this).find(".ftr_innr").slideToggle();
+                $('.ftr_innr').not($(this).find(".ftr_innr")).slideUp();
+
+            }
+        });
+    </script>
+    <style>
+        @media (max-width:768px) {
+            .ftr_innr {
+                display: none;
+            }
+
+            .sec-two-inner .nav-item {
+                display: table !important;
+            }
+        }
+    </style>
+    <script src="js/theme.js"></script>
+</body>
+</html>

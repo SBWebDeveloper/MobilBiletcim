@@ -1,0 +1,342 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+-----------------------------------------------------------------*/
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0c2f54;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+#footer h4 {
+    font-weight: 600 !important;
+}
+
+#footer .nav-link {
+    font-weight: 500 !important;
+}
+
+.login-signup, .primary-menu ul.navbar-nav > li > a, .nav-tabs .nav-item .nav-link {
+    font-weight: 600 !important;
+}
+
+.footer-baslik {
+    text-transform: uppercase;
+}
+
+.mobilfooter-simge {
+    display: none !important;
+}
+
+.gidis-donus-ucak-bileti {
+    float: left;
+    background: white;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+    .gidis-donus-ucak-bileti .ucus-sec-btn {
+        padding: 2px 12px !important;
+    }
+
+.odeme-baslik {
+    background: #0c2f55;
+    padding: 10px 0 10px 20px;
+    color: #fff;
+    border-radius: .25em .25em 0 0;
+    margin-bottom: 0;
+}
+
+.odeme-footer {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 0;
+    border-radius: .25em;
+}
+
+.ucus-saat {
+    font-weight: bold;
+    color: #3a3a32;
+    font-size: 1rem;
+    display: block;
+}
+
+.ucus-sehir {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    font-size: 0.75rem;
+    display: block;
+}
+
+.ucus-havaalani {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #3a3a32;
+    font-size: 0.75rem;
+    display: block;
+}
+
+.ucus-no {
+    margin-top: -8px;
+    float: left;
+}
+
+.ucus-detay-btn {
+    font-size: 12px;
+    margin-top: -7px;
+    float: left;
+    line-height: 22px;
+}
+
+.ucus-suresi {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3a3a32;
+    font-size: 0.75rem;
+    display: block;
+}
+
+.aktarma {
+    color: red;
+}
+
+.ucus-icon {
+    text-align: right;
+    border-bottom: 2px dashed #a2a2a2;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+    .ucus-icon i {
+        color: #888888;
+        font-weight: bold;
+        font-size: 22px;
+        position: absolute;
+        right: 0;
+    }
+
+.ucus-kalan-koltuk {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3a3a32;
+    font-size: 0.75rem;
+    display: block;
+}
+
+    .ucus-kalan-koltuk strong {
+        font-size: 19px;
+        font-weight: bold;
+        padding: 0 2px;
+        color: Red;
+    }
+
+.ucus-detay-listele {
+    position: relative;
+    padding-left: 10px;
+}
+
+.kalkis, .varis {
+    clear: both;
+    margin-left: 10px;
+}
+
+.varis {
+    margin-bottom: 10px;
+}
+
+.kalkis:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    left: -5px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #2dc44d;
+    background: #2dc44d;
+    border-radius: 50%;
+}
+
+.varis:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    left: -5px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #2dc44d;
+    background: transparent;
+    border-radius: 50%;
+}
+
+
+.ters-cevir {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.ucus-fiyat {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 3px;
+}
+
+    .ucus-fiyat small {
+        vertical-align: top;
+        font-weight: bold;
+        font-size: 10px;
+    }
+
+.ucus-sec-btn {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 3px;
+    padding: 2px 18px !important;
+}
+
+    .ucus-sec-btn:hover {
+        cursor: pointer;
+    }
+
+.ucus-firma-adi {
+    font-size: 0.85rem !important;
+    color: #343a40 !important;
+}
+
+.mobilbiletcim-baslik {
+    font-weight: 600;
+}
+
+.gidis-ucus-baslik {
+    background: #7CB900;
+    color: white;
+    padding: .3em;
+    text-align: center;
+}
+
+.donus-ucus-baslik {
+    background: #0069D0;
+    color: white;
+    padding: .3em;
+    text-align: center;
+}
+
+@media (min-width:768px) {
+    .gidis-donus-ucak-bileti .firma-logo {
+        max-width: 25px;
+        position: absolute;
+        top: -20px;
+        left: 25px;
+    }
+
+    .gidis-donus-ucak-bileti .ucus-firma-adi {
+        font-size: 0.85rem !important;
+        color: #343a40 !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-top: 3px;
+    }
+}
+
+@media (max-width:768px) {
+    .mobilfooter-simge {
+        display: inline-block !important;
+    }
+
+    .mobilgizle {
+        display: none !important;
+    }
+
+    .mobilbiletcim-baslik {
+        text-align: center;
+    }
+
+    .footer-baslik {
+        text-transform: uppercase;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #0c2f54;
+    }
+
+    .ucus-detay-btn {
+        display: none;
+    }
+
+
+    .ucus-no {
+        display: none;
+    }
+
+    .firma-logo {
+        display: table;
+        float: left;
+        margin-right: 5px;
+        margin-top: -5px;
+        width: 25px;
+        height: auto;
+    }
+
+    .ucus-sec-btn {
+        padding: 2px 12px !important;
+    }
+
+    .filtreleme {
+        margin-top: 30px;
+    }
+
+    .ust-ucus-tarihi {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .aktarma {
+        display: block;
+    }
+
+    .text-6 {
+        font-size: 1.10rem !important;
+    }
+}
+
+.col-xs-12 {
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.col-xs-9 {
+    width: 75%;
+}
+
+.col-xs-6 {
+    width: 50% !important;
+}
+
+
+.col-xs-4 {
+    width: 33.33333333%;
+}
+
+.col-xs-3 {
+    width: 25%;
+}

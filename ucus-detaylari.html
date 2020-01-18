@@ -1,0 +1,959 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link href="images/favicon.ico" rel="icon" />
+
+    <title>Uçuş Detayları ve Ödeme | Mobilbiletcim.com</title>
+    <meta name="description" content="Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com">
+    <meta name="author" content="sebahattinbakir.com.tr">
+
+    <!-- Web Fonts
+    ============================================= -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Rock+Salt|Source+Code+Pro:300,400,600" rel="stylesheet">
+
+    <style>
+        .form-control:not(.form-control-sm) {
+            padding: .5rem .8rem !important;
+            height: inherit;
+        }
+
+        .custom-select:not(.custom-select-sm) {
+            height: calc(2.4rem + 2px) !important;
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important;
+        }
+
+        /*ödeme formu*/
+        .payment-title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-container .field-container:first-of-type {
+            grid-area: name;
+        }
+
+        .form-container .field-container:nth-of-type(2) {
+            grid-area: number;
+        }
+
+        .form-container .field-container:nth-of-type(3) {
+            grid-area: expiration;
+        }
+
+        .form-container .field-container:nth-of-type(4) {
+            grid-area: security;
+        }
+
+        .field-container input {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .field-container {
+            position: relative;
+        }
+
+        .form-container {
+            display: grid;
+            grid-column-gap: 10px;
+            grid-template-columns: auto auto;
+            grid-template-rows: 90px 90px 90px;
+            grid-template-areas: "name name""number number""expiration security";
+            max-width: 400px;
+            padding: 20px;
+            color: #707070;
+        }
+
+        label {
+            padding-bottom: 0px;
+            font-size: 13px;
+            margin-bottom: 1px !important;
+        }
+
+        input {
+            margin-top: 0px;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid #dcdcdc;
+        }
+
+        .ccicon {
+            height: 36px;
+            position: absolute;
+            right: 3px;
+            top: calc(50% - 18px);
+            width: 60px;
+        }
+
+        /* CREDIT CARD IMAGE STYLING */
+        .preload * {
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -ms-transition: none !important;
+            -o-transition: none !important;
+        }
+
+        .odeme {
+            width: 100%;
+            max-width: 400px;
+            max-height: 251px;
+            height: 54vw;
+            padding: 20px;
+        }
+
+        #ccsingle {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+        }
+
+            #ccsingle svg {
+                width: 100px;
+                max-height: 55px;
+            }
+
+        .creditcard svg#cardfront,
+        .creditcard svg#cardback {
+            width: 100%;
+            -webkit-box-shadow: 1px 3px 3px 0px #0c2f55;
+            box-shadow: 1px 3px 3px 0px #0c2f55;
+            border-radius: 22px;
+        }
+
+        #generatecard {
+            display: none;
+        }
+
+        /* CHANGEABLE CARD ELEMENTS */
+        .creditcard .lightcolor,
+        .creditcard .darkcolor {
+            -webkit-transition: fill .5s;
+            transition: fill .5s;
+        }
+
+        .creditcard .lightblue {
+            fill: #5f6269;
+        }
+
+        .creditcard .lightbluedark {
+            fill: #000000;
+        }
+
+        .creditcard .red {
+            fill: #ef5350;
+        }
+
+        .creditcard .reddark {
+            fill: #d32f2f;
+        }
+
+        .creditcard .purple {
+            fill: #ab47bc;
+        }
+
+        .creditcard .purpledark {
+            fill: #7b1fa2;
+        }
+
+        .creditcard .cyan {
+            fill: #26c6da;
+        }
+
+        .creditcard .cyandark {
+            fill: #0097a7;
+        }
+
+        .creditcard .green {
+            fill: #66bb6a;
+        }
+
+        .creditcard .greendark {
+            fill: #388e3c;
+        }
+
+        .creditcard .lime {
+            fill: #8e8e8e;
+        }
+
+        .creditcard .limedark {
+            fill: #0e4595;
+        }
+
+        .creditcard .yellow {
+            fill: #ffeb3b;
+        }
+
+        .creditcard .yellowdark {
+            fill: #f9a825;
+        }
+
+        .creditcard .orange {
+            fill: #ff9800;
+        }
+
+        .creditcard .orangedark {
+            fill: #ef6c00;
+        }
+
+        .creditcard .grey {
+            fill: #1d4775;
+        }
+
+        .creditcard .greydark {
+            fill: #0c2f55;
+        }
+
+        /* FRONT OF CARD */
+        #svgname {
+            text-transform: uppercase;
+        }
+
+        #cardfront .st2 {
+            fill: #FFFFFF;
+        }
+
+        #cardfront .st3 {
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 600;
+        }
+
+        #cardfront .st4 {
+            font-size: 54.7817px;
+        }
+
+        #cardfront .st5 {
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 400;
+        }
+
+        #cardfront .st6 {
+            font-size: 33.1112px;
+        }
+
+        #cardfront .st7 {
+            opacity: 0.6;
+            fill: #FFFFFF;
+        }
+
+        #cardfront .st8 {
+            font-size: 24px;
+        }
+
+        #cardfront .st9 {
+            font-size: 36.5498px;
+        }
+
+        #cardfront .st10 {
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 300;
+        }
+
+        #cardfront .st11 {
+            font-size: 18px;
+        }
+
+        #cardfront .st12 {
+            fill: #4C4C4C;
+        }
+
+        /* BACK OF CARD */
+        #cardback .st0 {
+            fill: none;
+            stroke: #0F0F0F;
+            stroke-miterlimit: 10;
+        }
+
+        #cardback .st2 {
+            fill: #dedede;
+        }
+
+        #cardback .st3 {
+            fill: #F2F2F2;
+        }
+
+        #cardback .st4 {
+            fill: #D8D2DB;
+        }
+
+        #cardback .st5 {
+            fill: #C4C4C4;
+        }
+
+        #cardback .st6 {
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 400;
+        }
+
+        #cardback .st7 {
+            font-size: 27px;
+        }
+
+        #cardback .st8 {
+            opacity: 0.6;
+        }
+
+        #cardback .st9 {
+            fill: #FFFFFF;
+        }
+
+        #cardback .st10 {
+            font-size: 24px;
+        }
+
+        #cardback .st11 {
+            fill: #EAEAEA;
+        }
+
+        #cardback .st12 {
+            font-family: 'Rock Salt', cursive;
+        }
+
+        #cardback .st13 {
+            font-size: 37.769px;
+        }
+         
+        /*.container {
+            perspective: 1000px;
+        }*/
+
+        .creditcard {
+            width: 100%;
+            max-width: 400px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            transition: -webkit-transform 0.6s;
+            -webkit-transition: -webkit-transform 0.6s;
+            transition: transform 0.6s;
+            transition: transform 0.6s, -webkit-transform 0.6s;
+            cursor: pointer;
+        }
+
+            .creditcard .front,
+            .creditcard .back {
+                position: absolute;
+                width: 100%;
+                max-width: 400px;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -webkit-font-smoothing: antialiased;
+                color: #47525d;
+            }
+
+            .creditcard .back {
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+
+            .creditcard.flipped {
+                -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+            }
+    </style>
+
+    <!-- Stylesheet
+    ============================================= -->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+</head>
+<body>
+    <div id="main-wrapper">
+        <header id="header">
+            <div class="container">
+                <div class="header-row">
+                    <div class="header-column justify-content-start">
+                        <div class="logo">
+                            <a href="index.html" title="Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com">
+                                <img src="images/logo.png" alt="Ucuza Uçak Bileti Al, En Ucuz Uçak Bileti Fiyatları | Mobilbiletcim.com" style="width: 230px;" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-column justify-content-end">
+                        <nav class="primary-menu navbar navbar-expand-lg">
+                            <div id="header-nav" class="collapse navbar-collapse">
+                                <ul class="navbar-nav">
+                                    <li class=""><a class="" href="#">Uçak Bileti</a></li>
+                                    <li class=""><a class="" href="#">Yurtiçi</a></li>
+                                    <li class=""><a class="" href="#">Yurtdışı</a></li>
+                                    <li class=""><a class="" href="#">Check-In</a></li>
+                                    <li class=""><a class="" href="#">Blog</a></li>
+                                    <li class=""><a class="" href="#">İletişim</a></li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" href="#">Sayfalar</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="index.html">Anasayfa</a></li>
+                                            <li><a class="dropdown-item" href="tek-yon-ucak-bileti.html">Tek Yön Uçak Bileti</a></li>
+                                            <li><a class="dropdown-item" href="gidis-donus-ucak-bileti.html">Gidiş Dönüş Uçak Bileti</a></li>
+                                            <li><a class="dropdown-item" href="ucus-detaylari.html">Uçuş Detayları - Ödeme Sayfası</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="login-signup ml-lg-2">
+                                        <a class="pl-lg-4 pr-0" data-toggle="modal" data-target="#login-signup" href="#" title="Giriş Yap / Üye Ol">
+                                            Giriş Yap / Üye Ol <span class="d-none d-lg-inline-block"><i class="fas fa-user"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"> <span></span> <span></span> <span></span> </button>
+                </div>
+            </div>
+        </header>
+        <section class="page-header page-header-text-light bg-secondary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1>Uçuş Detayları</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="breadcrumb justify-content-start justify-content-md-end mb-0">
+                            <li><a href="index.html">Anasayfa</a></li>
+                            <li><a href="tek-yon-ucak-bileti.html">Uçak Bileti</a></li>
+                            <li><a href="#">Uçuş Detayları</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="content">
+            <section class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bg-light shadow-md rounded p-3 p-sm-4 confirm-details">
+                            <h2 class="text-6 mb-3">
+                                Erzurum <i class="fas fa-exchange-alt"></i> Ankara Gidiş - Dönüş
+                            </h2>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row align-items-center trip-title">
+                                        <div class="col-12 col-sm-auto text-sm-left">
+                                            <h5 class="m-0 trip-place"><i class="fas fa-plane-departure"></i> Gidiş Uçuşu</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                    <div class="col-lg-12 d-lg-flex">
+                                        <span class="align-text-top"><img class="img-fluid" alt="" src="images/brands/flights/anadolujet.png"></span>
+                                        <span class="align-middle ml-lg-2 text-left">
+                                            <span class="d-block ucus-firma-adi">AnadoluJet</span>
+                                            <small class="text-muted ucus-no" style="margin-top: -5px; display: block; float: inherit;">TK7079</small>
+                                            <div class="kalkis">
+                                                <strong>Kalkış: </strong>
+                                                <span class="text-underline">20 Oca 2020, Cu <strong style="background: #0c2f55; color: #fff; padding: 0 3px; border-radius: 3px;">05:55</strong> - Erzurum (Erzurum Havalimanı)</span>
+                                            </div>
+                                            <div class="varis">
+                                                <strong>Varış: </strong>
+                                                <span class="text-underline">25 Oca 2020, Cts <strong style="background: #0c2f55; color: #fff; padding: 0 3px; border-radius: 3px;">07:20</strong> - Ankara (Esenboga Havalimanı)</span>
+                                            </div>
+                                            <span class="text-2 d-block"><i class="far fa-clock"></i> Uçuş süresi: 1sa 10dk </span>
+                                            <span class="text-2 d-block"><i class="fas fa-suitcase-rolling"></i> Kişi başı 15 kg bagaj hakkı</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-4">
+                                <div class="card-header">
+                                    <div class="row align-items-center trip-title">
+                                        <div class="col-12 col-sm-auto text-sm-left">
+                                            <h5 class="m-0 trip-place"><i class="fas fa-plane-departure ters-cevir"></i> Dönüş Uçuşu</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                    <div class="col-lg-12 d-lg-flex">
+                                        <span class="align-text-top"><img class="img-fluid" alt="" src="images/brands/flights/thy.png"></span>
+                                        <span class="align-middle ml-lg-2 text-left">
+                                            <span class="d-block ucus-firma-adi">THY</span>
+                                            <small class="text-muted ucus-no" style="margin-top: -5px; display: block; float: inherit;">TK7079</small>
+                                            <div class="kalkis">
+                                                <strong>Kalkış: </strong>
+                                                <span class="text-underline">20 Oca 2020, Cu <strong style="background: #0c2f55; color: #fff; padding: 0 3px; border-radius: 3px;">05:55</strong> - Erzurum (Erzurum Havalimanı)</span>
+                                            </div>
+                                            <div class="varis">
+                                                <strong>Varış: </strong>
+                                                <span class="text-underline">25 Oca 2020, Cts <strong style="background: #0c2f55; color: #fff; padding: 0 3px; border-radius: 3px;">07:20</strong> - Ankara (Esenboga Havalimanı)</span>
+                                            </div>
+                                            <span class="text-2 d-block"><i class="far fa-clock"></i> Uçuş süresi: 1sa 10dk </span>
+                                            <span class="text-2 d-block"><i class="fas fa-suitcase-rolling"></i> Kişi başı 15 kg bagaj hakkı</span>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h2 class="text-4 odeme-baslik">
+                            <i class="far fa-credit-card"></i> İletişim Bilgileri
+                        </h2>
+                        <div class="bg-light shadow-md rounded p-3 p-sm-4 confirm-details">
+                            <!--<h6>E-posta Adresiniz</h6>-->
+                            <div class="form-row">
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" id="email" required placeholder="E-posta Adresiniz" type="text">
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <input class="form-control" data-bv-field="number" id="mobileNumber" required placeholder="Cep Telefonunuz" type="text">
+                                </div>
+                            </div>
+                            <div class="alert alert-info mt-1">
+                                <span class="badge badge-info">NOT:</span>  Uçuş ve bilet bilgilerinizi <strong>E-posta</strong> ve <strong>Ücretsiz SMS</strong> yoluyla ileteceğiz.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h2 class="text-4 odeme-baslik">
+                            <i class="far fa-credit-card"></i> Yolcu Bilgileri
+                        </h2>
+                        <div class="bg-light shadow-md rounded p-3 p-sm-4 confirm-details">
+                            <h6 style="display: inline-block;margin-right: 5px;">Yetişkin (1)</h6>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input id="male" name="profile" class="custom-control-input" checked="" required="" type="radio">
+                                <label class="custom-control-label" for="male">Erkek</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input id="female" name="profile" class="custom-control-input" required="" type="radio">
+                                <label class="custom-control-label" for="female">Kadın</label>
+                            </div>
+
+                            <div class="form-row mt-2">
+                                <div class="col-sm-4 form-group">
+                                    <input class="form-control" id="firstName" required placeholder="Ad" type="text">
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <input class="form-control" data-bv-field="number" id="lastName" required placeholder="Soyad" type="text">
+                                </div>
+                                <div class="col-sm-4 form-group">
+                                    <input class="form-control" data-bv-field="number" id="telephoneNumber" required placeholder="TC Kimlik No" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <h2 class="text-4 odeme-baslik"><i class="far fa-credit-card"></i> Ödeme Bilgileri</h2>
+                        <div class="bg-light shadow-md rounded p-3 p-sm-2 confirm-details">
+
+                            <div class="row">
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-5">
+                                    <div class="odeme preload">
+                                        <div class="creditcard">
+                                            <div class="front">
+                                                <div id="ccsingle"></div>
+                                                <svg version="1.1" id="cardfront" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     x="0px" y="0px" viewBox="0 0 750 471" style="enable-background: new 0 0 750 471;" xml:space="preserve">
+                                                <g id="Front">
+                                                <g id="CardBackground">
+                                                <g id="Page-1_1_">
+                                                <g id="amex_1_">
+                                                <path id="Rectangle-1_1_" class="lightcolor grey" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                            C0,17.9,17.9,0,40,0z" />
+                                                            </g>
+                                                        </g>
+                                                <path class="darkcolor greydark" d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
+                                                    </g>
+                                                <text transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber" class="st2 st3 st4">0123 4567 8910 1112</text>
+                                                <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname" class="st2 st5 st6">UMUT SOYKAN</text>
+                                                <text transform="matrix(1 0 0 1 54.1074 389.8793)" class="st7 st5 st8">Ad Soyad</text>
+                                                <text transform="matrix(1 0 0 1 479.7754 388.8793)" class="st7 st5 st8">Son Kullanma</text>
+                                                <text transform="matrix(1 0 0 1 65.1054 241.5)" class="st7 st5 st8">Kart No</text>
+                                                <g>
+                                                <text transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire" class="st2 st5 st9">01/23</text>
+                                                <text transform="matrix(1 0 0 1 479.3848 417.0097)" class="st2 st10 st11">VALID</text>
+                                                <text transform="matrix(1 0 0 1 479.3848 435.6762)" class="st2 st10 st11">THRU</text>
+                                                <polygon class="st2" points="554.5,421 540.4,414.2 540.4,427.9 		" />
+                                                    </g>
+                                                <g id="cchip">
+                                                <g>
+                                                <path class="st2" d="M168.1,143.6H82.9c-10.2,0-18.5-8.3-18.5-18.5V74.9c0-10.2,8.3-18.5,18.5-18.5h85.3
+                        c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
+                                                        </g>
+                                                <g>
+                                                <g>
+                                                <rect x="82" y="70" class="st12" width="1.5" height="60" />
+                                                            </g>
+                                                <g>
+                                                <rect x="167.4" y="70" class="st12" width="1.5" height="60" />
+                                                            </g>
+                                                <g>
+                                                <path class="st12" d="M125.5,130.8c-10.2,0-18.5-8.3-18.5-18.5c0-4.6,1.7-8.9,4.7-12.3c-3-3.4-4.7-7.7-4.7-12.3
+                            c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
+                            C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
+                            c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
+                            c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
+                                                            </g>
+                                                <g>
+                                                <rect x="82.8" y="82.1" class="st12" width="25.8" height="1.5" />
+                                                            </g>
+                                                <g>
+                                                <rect x="82.8" y="117.9" class="st12" width="26.1" height="1.5" />
+                                                            </g>
+                                                <g>
+                                                <rect x="142.4" y="82.1" class="st12" width="25.8" height="1.5" />
+                                                            </g>
+                                                <g>
+                                                <rect x="142" y="117.9" class="st12" width="26.2" height="1.5" />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                                <g id="Back">
+                                                </g>
+                                            </svg>
+                                            </div>
+                                            <div class="back">
+                                                <svg version="1.1" id="cardback" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     x="0px" y="0px" viewBox="0 0 750 471" style="enable-background: new 0 0 750 471;" xml:space="preserve">
+                                                <g id="Front">
+                                                <line class="st0" x1="35.3" y1="10.4" x2="36.7" y2="11" />
+                                                </g>
+                                                <g id="Back">
+                                                <g id="Page-1_2_">
+                                                <g id="amex_2_">
+                                                <path id="Rectangle-1_2_" class="darkcolor greydark" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40
+                        C0,17.9,17.9,0,40,0z" />
+                                                        </g>
+                                                    </g>
+                                                <rect y="61.6" class="st2" width="750" height="78" />
+                                                <g>
+                                                <path class="st3" d="M701.1,249.1H48.9c-3.3,0-6-2.7-6-6v-52.5c0-3.3,2.7-6,6-6h652.1c3.3,0,6,2.7,6,6v52.5
+                    C707.1,246.4,704.4,249.1,701.1,249.1z" />
+                                                <rect x="42.9" y="198.6" class="st4" width="664.1" height="10.5" />
+                                                <rect x="42.9" y="224.5" class="st4" width="664.1" height="10.5" />
+                                                <path class="st5" d="M701.1,184.6H618h-8h-10v64.5h10h8h83.1c3.3,0,6-2.7,6-6v-52.5C707.1,187.3,704.4,184.6,701.1,184.6z" />
+                                                    </g>
+                                                <text transform="matrix(1 0 0 1 621.999 227.2734)" id="svgsecurity" class="st6 st7">985</text>
+                                                <g class="st8">
+                                                <text transform="matrix(1 0 0 1 518.083 280.0879)" class="st9 st6 st10">Güvenlik No</text>
+                                                    </g>
+                                                <rect x="58.1" y="378.6" class="st11" width="375.5" height="13.5" />
+                                                <rect x="58.1" y="405.6" class="st11" width="421.7" height="13.5" />
+                                                <text transform="matrix(1 0 0 1 59.5073 228.6099)" id="svgnameback" class="st12 st13">Umut Soykan</text>
+                                                </g>
+                                            </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="form-container">
+                                        <div class="field-container">
+                                            <label for="name">Kart Sahibi(Ad Soyad):</label>
+                                            <input id="name" maxlength="20" type="text">
+                                        </div>
+                                        <div class="field-container">
+                                            <label for="cardnumber">Kart No:</label><span id="generatecard">Testing</span>
+                                            <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
+                                            <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                                            </svg>
+                                        </div>
+                                        <div class="field-container">
+                                            <label for="expirationdate">Son Kullanma Tarihi:</label>
+                                            <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
+                                        <div class="field-container">
+                                            <label for="securitycode">Güvenlik [CVC2] No:</label>
+                                            <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-1"></div>
+                            </div>
+                            <div class="row odeme-footer">
+                                <div class="col-lg-2">&nbsp;</div>
+                                <div class="col-lg-8 text-center">
+                                    <strong>100% Güvenli</strong>
+                                    <p>MobilBiletcim.com üzerinde yapacağınız işlemler, dünyanın önde gelen güvenlik sertifikası şirketi GlobalSign koruması altındadır.</p>
+
+                                    <p>
+                                        Yukarıdaki formu doldurarak bilet satın aldığınızda birkaç dakika içinde <strong>e-biletiniz</strong> cep telefonunuza ve eposta adresinize gönderilecektir.
+                                    </p>
+                                </div>
+                                <div class="col-lg-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<aside class="col-lg-4 mt-4 mt-lg-0">
+                        <div class="bg-light shadow-md rounded p-3">
+                            <h3 class="text-5 mb-3">Fare Details</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    Base Fare <span class="float-right text-4 font-weight-500 text-dark">$980</span><br>
+                                    <small class="text-muted">Adult : 1, Child : 0, Infant : 0</small>
+                                </li>
+                                <li class="mb-2">Taxes & Fees <span class="float-right text-4 font-weight-500 text-dark">$215</span></li>
+                                <li class="mb-2">Insurance <span class="float-right text-4 font-weight-500 text-dark">$95</span></li>
+                            </ul>
+                            <div class="text-dark bg-light-4 text-4 font-weight-600 p-3"> Total Amount <span class="float-right text-6">$1290</span> </div>
+                            <h3 class="text-4 mb-3 mt-4">Promo Code</h3>
+                            <div class="input-group form-group">
+                                <input class="form-control" placeholder="Promo Code" aria-label="Promo Code" type="text">
+                                <span class="input-group-append">
+                                    <button class="btn btn-secondary" type="submit">APPLY</button>
+                                </span>
+                            </div>
+                            <ul class="promo-code pre-scrollable">
+                                <li><span class="d-block text-3 font-weight-600">FLTOFFER</span>Up to $500 Off on your booking. Hurry! Limited period offer. <a class="text-1" href="">Terms & Conditions</a></li>
+                                <li><span class="d-block text-3 font-weight-600">HOTOFFER</span>Up to $500 Off on your booking. Hurry! Limited period offer. <a class="text-1" href="">Terms & Conditions</a></li>
+                                <li><span class="d-block text-3 font-weight-600">SUMMEROFFER</span>Up to $500 Off on your booking. Hurry! Limited period offer. <a class="text-1" href="">Terms & Conditions</a></li>
+                                <li><span class="d-block text-3 font-weight-600">BIGOFFER</span>Up to $500 Off on your booking. Hurry! Limited period offer. <a class="text-1" href="">Terms & Conditions</a></li>
+                                <li><span class="d-block text-3 font-weight-600">FLTOFFER</span>Up to $500 Off on your booking. Hurry! Limited period offer. <a class="text-1" href="">Terms & Conditions</a></li>
+                                <li><span class="d-block text-3 font-weight-600">FLTOFFER</span>Up to $500 Off on your booking. Hurry! Limited period offer. <a class="text-1" href="">Terms & Conditions</a></li>
+                            </ul>
+                            <button class="btn btn-primary btn-block" onclick="location.href='odeme.html';" type="submit">Proceed To Payment</button>
+                        </div>
+                    </aside>-->
+                </div>
+            </section>
+        </div>
+        <footer id="footer" class="bg-white pt-5 pb-4 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md mb-3 mb-md-0 sec-two-inner">
+                        <h4 class="text-3 font-weight-400 mb-3 footer-baslik">Yurtiçi Şehirler <i class="mobilfooter-simge fas fa-chevron-down"></i></h4>
+                        <ul class="nav flex-column ftr_innr">
+                            <div class="row">
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">İstanbul Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Ankara Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Trabzon Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Antalya Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">İzmir Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Bodrum Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Erzurum Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Erzincan Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Mardin Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Şanlıurfa Uçak Bileti</a></li>
+                                </div>
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Diyarbakır Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Gaziantep Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kayseri Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Adana Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Elazığ Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Dalaman Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Malatya Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Samsun Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Konya Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Denizli Uçak Bileti</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md mb-3 mb-md-0 sec-two-inner">
+                        <h4 class="text-3 font-weight-400 mb-3 footer-baslik">Yurtdışı Şehirler <i class="mobilfooter-simge fas fa-chevron-down"></i></h4>
+                        <ul class="nav flex-column ftr_innr">
+                            <div class="row">
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Londra Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Bakü Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kiev Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Frankfurt Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Paris Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Prag Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Brüksel Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Hollanda Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Roma Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">İtalya Uçak Bilet</a></li>
+                                </div>
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Dubai Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Köln Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Batum Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Venedik Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Bangkok Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Moskova Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Münih Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Danimarka Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Düsseldorf Uçak Bileti</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Amsterdam Uçak Bileti</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md mb-3 mb-md-0 sec-two-inner">
+                        <h4 class="text-3 font-weight-400 mb-3 footer-baslik">Kurumsal <i class="mobilfooter-simge fas fa-chevron-down"></i></h4>
+                        <ul class="nav flex-column ftr_innr">
+                            <div class="row">
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">Hakkımıza</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Uçak Bileti Ara</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Check-In Yap</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Sıkça Sorulan Sorular</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kullanım Koşulları</a></li>
+                                </div>
+                                <div class="col-6">
+                                    <li class="nav-item"> <a class="nav-link" href="#">KVKK</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Gizlilik Politikası</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Kampanyalar</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">İletişim Bilgileri</a></li>
+                                    <li class="nav-item"> <a class="nav-link" href="#">Yardım Merkezi</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                        <a href="https://www.tursab.org.tr/tr/ddsv" target="_blank" rel="nofollow">
+                            <img src="images/footer-tursab-belgeno.png" alt="tursab-belge-no" style="padding-top: 10px;max-width: 280px;text-align: center;margin: 0 auto;display: block;" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4" style="border-top: 1px solid #e6e9ec;">
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <p>Güvenli Ödeme</p>
+                        <ul class="payments-types">
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/visa.png" alt="visa" title="Visa"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/mastercard.png" alt="mastercard" title="Mastercard"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/comodo.png" alt="comodo" title="Comodo SSL"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/tursab.png" alt="TURSAB" title="TURSAB"></a></li>
+                            <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="images/payment/aiata.png" alt="IATA" title="IATA"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <p>E-Bülten</p>
+                        <div class="input-group newsletter">
+                            <input class="form-control" placeholder="E-mail Adresiniz" name="newsletterEmail" id="newsletterEmail" type="text">
+                            <span class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">Abone Ol</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-md-end flex-column">
+                        <p>Bizi Takip edin</p>
+                        <ul class="social-icons social-icons-sm social-icons-colored">
+                            <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social-icons-pinterest"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                            <li class="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="footer-copyright">
+                    <small>Sitede yer alan tüm metin, resim ve içeriklerin tüm hakları mobilbiletcim.com'a aittir. Hiç bir şekilde basılı veya elektronik bir ortamda izinsiz kullanılmaz ve kopyalanamaz.</small>
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item"> <a class="nav-link" href="#">Kişisel Verilerin Korunması</a> </li>
+                        <li class="nav-item"> <a class="nav-link active" href="#">Kullanım Koşulları</a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Gizlilik Politikası</a> </li>
+                    </ul>
+                    <p class="copyright-text">
+                        2020 © <a href="#">Mobilbiletcim.com</a> Her Hakkı Saklıdır. <br /> <a href="https://www.sebahattinbakir.com.tr/hizmetlerimiz/ankara-web-tasarim/" target="blank">Ankara Web Tasarım Ajansı</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a id="back-to-top" data-toggle="tooltip" title="Yukarı Çık" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- Giriş Yap / Üye Ol
+    ============================================= -->
+    <div id="login-signup" class="modal fade" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content p-sm-3">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"> <a id="login-tab" class="nav-link active text-4" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Giriş Yap</a> </li>
+                        <li class="nav-item"> <a id="signup-tab" class="nav-link text-4" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Üye Ol</a> </li>
+                    </ul>
+                    <div class="tab-content pt-4">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <form id="loginForm" method="post">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="loginMobile" required placeholder="Telefon veya Email Adresi">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="loginPassword" required placeholder="Şifre">
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-sm">
+                                        <div class="form-check custom-control custom-checkbox">
+                                            <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
+                                            <label class="custom-control-label" for="remember-me">Beni hatırla</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm text-right">
+                                        <a class="justify-content-end" href="#">Şifremi Unuttum ?</a>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-block" type="submit">Giriş Yap</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                            <form id="signupForm" method="post">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" data-bv-field="number" id="signupEmail" required placeholder="Email Adresi">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="signupMobile" required placeholder="Telefon Numarası">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="signuploginPassword" required placeholder="Şifre">
+                                </div>
+                                <button class="btn btn-primary btn-block" type="submit">Üye Ol</button>
+                            </form>
+                        </div>
+                        <div class="d-flex align-items-center my-4">
+                            <hr class="flex-grow-1">
+                            <span class="mx-2">veya</span>
+                            <hr class="flex-grow-1">
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <button type="button" class="btn btn-block btn-outline-primary">Facebook ile Giriş Yap</button>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn btn-block btn-outline-danger">Google ile Giriş Yap</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Giriş Yap / Üye Ol end -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="vendor/odeme-formu/script.js"></script>
+    <script src="vendor/odeme-formu/imask.min.js"></script>
+    <script>
+        $(".sec-two-inner").click(function () {
+            if ($(window).width() < 767) {
+                $(this).find(".ftr_innr").slideToggle();
+                $('.ftr_innr').not($(this).find(".ftr_innr")).slideUp();
+
+            }
+        });
+    </script>
+    <style>
+        @media (max-width:768px) {
+            .ftr_innr {
+                display: none;
+            }
+
+            .sec-two-inner .nav-item {
+                display: table !important;
+            }
+        }
+    </style>
+</body>
+</html>
