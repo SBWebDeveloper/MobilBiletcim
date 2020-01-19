@@ -100,7 +100,7 @@
                                     <label class="custom-control-label" for="roundtrip">Gidiş Dönüş</label>
                                 </div>
                             </div>
-                            <div class="form-row">
+                            <div class="form-row search-section">
                                 <div class="col-md-4 col-lg-2 form-group">
                                     <input type="text" class="form-control" id="flightFrom" required placeholder="Nereden">
                                     <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
@@ -208,7 +208,7 @@
                                         <button class="btn btn-primary btn-block submit-done" type="button">Tamam</button>
                                     </div>
                                 </div>
-                                <div class="col-md-4 col-lg-2 form-group">
+                                <div class="col-md-4 col-lg-2 form-group search-button">
                                     <button class="btn btn-primary btn-block" type="submit">Arama Yap</button>
                                 </div>
                             </div>
@@ -236,428 +236,857 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flight-list">
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/anadolujet.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                           <div class="row">
+                               <div class="flight-list col-lg-12 departure-flight">
+                                   <div class="gidis-ucus-baslik"><span>Gidiş Uçuşunuz</span></div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/anadolujet.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">AnadoluJet</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">05:55</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">07:20</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">250 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/pegasus.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">05:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">07:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/pegasus.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">Pegasus</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">10:25</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <span class="ucus-kalan-koltuk">Son <strong>3</strong> Koltuk</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">11:35</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">283 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/thy.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">10:25</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>3</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">11:35</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">283 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/thy.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">THY</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">14:40</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 6sa 10dk <strong class="aktarma">1 Aktarma</strong></span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">18:50</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">315 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/sun-express.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">14:40</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 6sa 10dk <strong class="aktarma">1 Aktarma</strong></span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">18:50</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">315 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/sun-express.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">SunExpress</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">17:50</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">22:40</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">346 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/atlas-global.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">17:50</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">22:40</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">346 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/atlas-global.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">AtlasGlobal</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">21:55</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">23:10</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">463 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/onur-air.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">21:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">23:10</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">463 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/onur-air.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">Onur Air</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">22:55</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">00:20</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">250 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/anadolujet.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">22:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">00:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/anadolujet.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">AnadoluJet</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">05:55</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">07:20</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">250 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/pegasus.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">05:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">07:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/pegasus.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">Pegasus</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">10:25</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <span class="ucus-kalan-koltuk">Son <strong>3</strong> Koltuk</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">11:35</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">283 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/thy.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">10:25</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>3</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">11:35</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">283 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/thy.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">THY</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">14:40</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 6sa 10dk <strong class="aktarma">1 Aktarma</strong></span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">18:50</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">315 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/sun-express.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">14:40</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 6sa 10dk <strong class="aktarma">1 Aktarma</strong></span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">18:50</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">315 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/sun-express.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">SunExpress</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">17:50</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">22:40</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">346 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/atlas-global.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">17:50</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">22:40</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">346 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/atlas-global.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">AtlasGlobal</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">21:55</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">23:10</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">463 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flight-item">
-                                    <div class="row align-items-center flex-row pt-3 pb-2 px-2">
-                                        <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
-                                            <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/onur-air.png"></span>
-                                            <span class="align-middle ml-lg-2 text-left">
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">21:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">23:10</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">463 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/onur-air.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
                                                 <span class="d-block ucus-firma-adi">Onur Air</span>
                                                 <small class="text-muted ucus-no">TK7079</small>
                                             </span>
-                                        </div>
-                                        <div class="clearfix visible-sm visible-xs"></div>
-                                        <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
-                                            <div class="row">
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
-                                                    <span class="ucus-saat">22:55</span>
-                                                    <span class="ucus-sehir">Erzurum</span>
-                                                    <span class="ucus-havaalani">Erzurum Havalimanı</span>
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
-                                                    <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
-                                                    <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
-                                                    <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
-                                                </div>
-                                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
-                                                    <span class="ucus-saat">00:20</span>
-                                                    <span class="ucus-sehir">Ankara</span>
-                                                    <span class="ucus-havaalani">Esenboğa Havalimanı</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
-                                            <span class="ucus-fiyat">250 <small>TL</small></span>
-                                            <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">22:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">00:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="flight-list return-flight">
+                                   <div class="donus-ucus-baslik"><span>Dönüş Uçuşunuz</span></div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/anadolujet.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">AnadoluJet</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">05:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">07:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/pegasus.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">Pegasus</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">10:25</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>3</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">11:35</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">283 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/thy.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">THY</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">14:40</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 6sa 10dk <strong class="aktarma">1 Aktarma</strong></span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">18:50</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">315 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/sun-express.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">SunExpress</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">17:50</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">22:40</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">346 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/atlas-global.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">AtlasGlobal</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">21:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">23:10</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">463 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/onur-air.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">Onur Air</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">22:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">00:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/anadolujet.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">AnadoluJet</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">05:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">07:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/pegasus.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">Pegasus</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">10:25</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <span class="ucus-kalan-koltuk">Son <strong>3</strong> Koltuk</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">11:35</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">283 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/thy.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">THY</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">14:40</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 6sa 10dk <strong class="aktarma">1 Aktarma</strong></span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">18:50</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">315 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/sun-express.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">SunExpress</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">17:50</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">22:40</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">346 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/atlas-global.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">AtlasGlobal</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">21:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">23:10</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">463 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="flight-item">
+                                       <div class="row align-items-center flex-row pt-3 pb-2 px-2">
+                                           <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 d-lg-flex company-info">
+                                               <span class="align-text-top"><img class="img-fluid firma-logo" alt="" src="images/brands/flights/onur-air.png"></span>
+                                               <span class="align-middle ml-lg-2 text-left">
+                                                <span class="d-block ucus-firma-adi">Onur Air</span>
+                                                <small class="text-muted ucus-no">TK7079</small>
+                                            </span>
+                                           </div>
+                                           <div class="clearfix visible-sm visible-xs"></div>
+                                           <div class="col-lg-8 col-md-8 col-sm-10 col-xs-9">
+                                               <div class="row">
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
+                                                       <span class="ucus-saat">22:55</span>
+                                                       <span class="ucus-sehir">Erzurum</span>
+                                                       <span class="ucus-havaalani">Erzurum Havalimanı</span>
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center p-0">
+                                                       <span class="ucus-suresi"><i class="far fa-clock"></i> 1sa 25dk</span>
+                                                       <span class="ucus-icon"><i class="fas fa-plane"></i> </span>
+                                                       <!--<span class="ucus-kalan-koltuk">Son <strong>1</strong> Koltuk</span>-->
+                                                   </div>
+                                                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left pr-0">
+                                                       <span class="ucus-saat">00:20</span>
+                                                       <span class="ucus-sehir">Ankara</span>
+                                                       <span class="ucus-havaalani">Esenboğa Havalimanı</span>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 text-right pl-0">
+                                               <span class="ucus-fiyat">250 <small>TL</small></span>
+                                               <span class="ucus-sec-btn btn btn-sm btn-primary">SEÇ</span>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-lg-4 ml-auto m-3 contiune-button">
+                                   <button class="btn btn-primary btn-block" type="submit">Devam et</button>
+                               </div>
+                           </div>
                         </div>
                     </div>
                     <aside class="col-md-3 filtreleme">
@@ -906,7 +1335,7 @@
                     </p>
                 </div>
             </div>
-        </footer> 
+        </footer>
     </div>
     <a id="back-to-top" data-toggle="tooltip" title="Yukarı Çık" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 
@@ -983,7 +1412,7 @@
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script>
     <script src="vendor/daterangepicker/moment.min.js"></script>
-    <script src="vendor/daterangepicker/daterangepicker.js"></script>  
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
     <script>
     $(function () {
         'use strict';
